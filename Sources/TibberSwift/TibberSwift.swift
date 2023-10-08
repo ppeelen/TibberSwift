@@ -4,6 +4,7 @@
 import Foundation
 import os.log
 
+/// ``TibberSwift`` is a simple SPM that helps you create queries towards Tibber's GraphQL server.
 public final class TibberSwift {
     private let apiKey: String
 
@@ -15,12 +16,15 @@ public final class TibberSwift {
         category: String(describing: TibberSwift.self)
     )
 
+    /// The init method for ``TibberSwift``, requires the ApiKey to be send in. This can be fetched from [https://developer.tibber.com](https://developer.tibber.com/settings/access-token)
+    /// - Parameter apiKey: The API Key from Tibber
     public init(apiKey: String) {
         self.apiKey = apiKey
         self.jsonDecoder = JSONDecoder()
         self.urlSession = URLSession.shared
     }
 
+    /// Meant for dependency injection while using tests
     internal init(apiKey: String, jsonDecoder: JSONDecoder = JSONDecoder(), urlSession: URLSession = URLSession.shared) {
         self.apiKey = apiKey
         self.jsonDecoder = jsonDecoder
@@ -104,10 +108,13 @@ private extension TibberSwift {
     }
 }
 
+/// The errors that can be returned by ``TibberSwift``
 public enum TibberSwiftError: LocalizedError {
+    /// Thrown when the response of the HTTP call is invalid
     case invalidResponse
+    /// Thrown if the statusCode of the response object from the HTTP call is not between 200 and 300, included the response object. If data is available, this will be logged to the console.
     case invalidStatusCode(Int)
-    case noData
+    /// Thrown if the response from the HTTP call could not be decoded to the requested Output
     case decodingError
 
     public var errorDescription: String? {
@@ -116,14 +123,8 @@ public enum TibberSwiftError: LocalizedError {
             "Invalid response received. Could not get a status code."
         case .invalidStatusCode(let statusCode):
             "Invalid status code received. Expected status code between 200 and 300, but got \(statusCode) instead."
-        case .noData:
-            "No data was provided by the endpoint"
         case .decodingError:
             "Could not transform result object to request data object"
         }
     }
-}
-
-private enum LogLevel {
-    case info, warning, error
 }

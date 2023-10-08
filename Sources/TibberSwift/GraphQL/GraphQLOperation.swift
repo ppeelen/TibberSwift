@@ -1,9 +1,13 @@
 import Foundation
 
-public enum GraphQLOperationError: LocalizedError {
+/// The errors that can be returned by ``GraphQLOperation``
+public enum GraphQLOperationError: Error {
+    /// The query file defined is not found
     case queryFileNotFound
+    /// The query file was found, but the data for it could not be retrieved
     case noDataForQuery
 
+    /// The description for the error
     public var errorDescription: String? {
         switch self {
         case .queryFileNotFound:
@@ -14,7 +18,7 @@ public enum GraphQLOperationError: LocalizedError {
     }
 }
 
-public protocol GraphQLOperationDefinition {
+protocol GraphQLOperationDefinition {
     func encode(to encoder: Encoder) throws
     func getURLRequest(apiKey: String) throws -> URLRequest
 }

@@ -1,6 +1,8 @@
 import Foundation
 
+/// A Home constant defining the addresses of a user's home
 public struct Home: Codable {
+    /// The address constant defining a physical address of a home
     public struct Address: Codable {
         public let address1: String
         public let address2: String?
@@ -12,6 +14,9 @@ public struct Home: Codable {
         public let longitude: String
     }
 
+    /// The address of the home
     public let address: Address
+
+    /// Tibber's internal ID for a home
     public let id: String
 }
