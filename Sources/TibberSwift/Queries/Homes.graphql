@@ -1,0 +1,17 @@
+{
+  viewer {
+    homes {
+      id
+      address {
+        address1
+        address2
+        address3
+        postalCode
+        city
+        country
+        latitude
+        longitude
+      }
+    }
+  }
+}

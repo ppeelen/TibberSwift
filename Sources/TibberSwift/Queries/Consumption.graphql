@@ -1,0 +1,19 @@
+query consumption($resolution: EnergyResolution!, $last: Int!){
+  viewer {
+    homes {
+      id
+      consumption(resolution: $resolution, last: $last) {
+        nodes {
+          from
+          to
+          cost
+          currency
+          unitPrice
+          unitPriceVAT
+          consumption
+          consumptionUnit
+        }
+      }
+    }
+  }
+}
