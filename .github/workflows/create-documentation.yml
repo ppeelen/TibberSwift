@@ -33,7 +33,7 @@ jobs:
       - name: Create web folder
         run: |
           $(xcrun --find docc) process-archive \
-              transform-for-static-hosting .documentationArchive/Build/Products/Debug-iphoneos/DoccFramework.doccarchive \
+              transform-for-static-hosting .documentationArchive/Build/Products/Debug-iphoneos/TibberSwift.doccarchive \
               --output-path docs \
               --hosting-base-path TibberSwift
           
