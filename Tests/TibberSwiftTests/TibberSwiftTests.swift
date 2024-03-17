@@ -2,26 +2,26 @@ import XCTest
 @testable import TibberSwift
 
 final class TibberSwiftTests: XCTestCase {
-
+    
     var urlSessionMock: URLSessionMock!
     var sut: TibberSwift!
-
+    
     override func setUp() async throws {
         let urlSessionMock = URLSessionMock()
         self.urlSessionMock = urlSessionMock
     }
-
+    
     override func tearDown() async throws {
         urlSessionMock = nil
     }
-
+    
     // MARK: - TibberSwift network operations
-
+    
     func testInvalidStatusCode() async throws {
         urlSessionMock.dataForReturnValue = (Data(), TestDataManager.dummyResponse(statusCode: 404))
-
+        
         let sut = TibberSwift(apiKey: "abc123", urlSession: urlSessionMock)
-
+        
         // When
         do {
             _ = try await sut.loggedInUser()
@@ -34,12 +34,12 @@ final class TibberSwiftTests: XCTestCase {
             XCTAssertEqual(statusCode, 404)
         }
     }
-
+    
     func testInvalidResponse() async throws {
         urlSessionMock.dataForReturnValue = (Data(), URLResponse())
-
+        
         let sut = TibberSwift(apiKey: "abc123", urlSession: urlSessionMock)
-
+        
         // When
         do {
             _ = try await sut.loggedInUser()
@@ -51,20 +51,22 @@ final class TibberSwiftTests: XCTestCase {
             }
             XCTAssertEqual(error, TibberSwiftError.invalidResponse)
         }
+        
+        XCTAssertEqual(urlSessionMock.dataRequestInvokeCount, 1)
     }
-
+    
     // MARK: - Test loggedInUser()
-
+    
     func testLoggedInUser() async throws {
         // Given
         let data = TestDataManager.getData(forFile: "json/UserLogin.json")!
         urlSessionMock.dataForReturnValue = (data, TestDataManager.dummyResponse())
-
+        
         let sut = TibberSwift(apiKey: "tibberSwiftApiKey", urlSession: urlSessionMock)
-
+        
         // When
         let result = try await sut.loggedInUser()
-
+        
         // Then
         XCTAssertEqual(result.name, "John Appleseed")
         XCTAssertEqual(urlSessionMock.dataRequestInvokeCount, 1)
@@ -75,17 +77,17 @@ final class TibberSwiftTests: XCTestCase {
                                                                          "Authorization": "tibberSwiftApiKey",
                                                                          "User-Agent": "TibberSwift"])
     }
-
+    
     // MARK: - Test homes()
-
+    
     func testHomesOneAddress() async throws {
         let data = TestDataManager.getData(forFile: "json/homes.json")!
         urlSessionMock.dataForReturnValue = (data, TestDataManager.dummyResponse())
-
+        
         let sut = TibberSwift(apiKey: "tibberSwiftApiKey", urlSession: urlSessionMock)
-
+        
         let result = try await sut.homes()
-
+        
         XCTAssertFalse(result.isEmpty)
         XCTAssertEqual(result.count, 1)
         XCTAssertEqual(result.first?.id, "f2a876f3-e09e-4bba-af19-79b038893c3d")
@@ -98,15 +100,15 @@ final class TibberSwiftTests: XCTestCase {
                                                                          "Authorization": "tibberSwiftApiKey",
                                                                          "User-Agent": "TibberSwift"])
     }
-
+    
     func testHomesMultipleAddress() async throws {
         let data = TestDataManager.getData(forFile: "json/homesMultiple.json")!
         urlSessionMock.dataForReturnValue = (data, TestDataManager.dummyResponse())
-
+        
         let sut = TibberSwift(apiKey: "otherKey", urlSession: urlSessionMock)
-
+        
         let result = try await sut.homes()
-
+        
         XCTAssertFalse(result.isEmpty)
         XCTAssertEqual(result.count, 2)
         XCTAssertEqual(result[0].id, "f2a876f3-e09e-4bba-af19-79b038893c3d")
@@ -123,19 +125,19 @@ final class TibberSwiftTests: XCTestCase {
                                                                          "Authorization": "otherKey",
                                                                          "User-Agent": "TibberSwift"])
     }
-
+    
     // MARK: - Test Consumption
-
+    
     func testConsumption() async throws {
         // Given
         let data = TestDataManager.getData(forFile: "json/Consumption.json")!
         urlSessionMock.dataForReturnValue = (data, TestDataManager.dummyResponse())
-
+        
         let sut = TibberSwift(apiKey: "consumptionKey", urlSession: urlSessionMock)
-
+        
         // When
         let result = try await sut.consumption()
-
+        
         // Then
         XCTAssertEqual(result.homes.first?.id, "f2a876f3-e09e-4bba-af19-79b038893c3d")
         XCTAssert(result.homes.first?.consumption.nodes.isEmpty == false)
@@ -147,21 +149,5 @@ final class TibberSwiftTests: XCTestCase {
         XCTAssertEqual(urlSessionMock.dataRequest?.allHTTPHeaderFields, ["Content-Type": "application/json",
                                                                          "Authorization": "consumptionKey",
                                                                          "User-Agent": "TibberSwift"])
-    }
-}
-
-final class URLSessionMock: URLSessionDefinition {
-    public var dataRequestInvokeCount = 0
-    public var dataRequest: URLRequest?
-    public var dataDelegate: URLSessionTaskDelegate?
-    public var dataForReturnValue: (Data, URLResponse)?
-
-    func data(for request: URLRequest, delegate: (URLSessionTaskDelegate)?) async throws -> (Data, URLResponse) {
-        dataRequestInvokeCount += 1
-        dataRequest = request
-        dataDelegate = delegate
-
-        guard let dataForReturnValue else { fatalError("No return value set") }
-        return dataForReturnValue
     }
 }

@@ -14,7 +14,7 @@ final class TestDataManager {
     static func dummyResponse(withUrl url: String = "https://dummy.url/",
                               statusCode: Int = 200,
                               responseHeaders: [String: String]? = nil) -> URLResponse {
-        var responseHeaderFields: [String: String] = responseHeaders ?? [:]
+        let responseHeaderFields: [String: String] = responseHeaders ?? [:]
 
         var response: URLResponse? = nil
         if let url = URL(string: "\(url)"),

@@ -28,14 +28,16 @@ public struct GraphQLOperation<Input: Encodable, Output: Decodable>: GraphQLOper
     private var input: Input
     private var operationString: String
     private let url = URL(string: "https://api.tibber.com/v1-beta/gql")! // swiftlint:disable:this force_unwrapping
+    private let jsonEncoder: JSONEncoder
 
     /// Init method used with Input and GraphQL query string
     /// - Parameters:
     ///   - input: The input encodable to use with the query
     ///   - operationString: The operation string, aka graphQL query to use
-    public init(input: Input, operationString: String) {
+    public init(input: Input, operationString: String, jsonEncoder: JSONEncoder = JSONEncoder()) {
         self.input = input
         self.operationString = operationString
+        self.jsonEncoder = jsonEncoder
     }
 
     /// Init method used with Input and reference to GraphQL query file
@@ -44,7 +46,7 @@ public struct GraphQLOperation<Input: Encodable, Output: Decodable>: GraphQLOper
     /// - Parameters:
     ///   - input: The input encodable to use with the query
     ///   - queryFilename: The filename of the query file, excluding the extension. The query file's extension should be `.graphql`.
-    public init(input: Input, queryFilename: String) throws {
+    public init(input: Input, queryFilename: String, jsonEncoder: JSONEncoder = JSONEncoder()) throws {
         self.input = input
 
         let url: URL
@@ -59,6 +61,7 @@ public struct GraphQLOperation<Input: Encodable, Output: Decodable>: GraphQLOper
         
         guard let queryString = String(data: data, encoding: .utf8) else { throw GraphQLOperationError.noDataForQuery }
         self.operationString = queryString
+        self.jsonEncoder = jsonEncoder
     }
 
     private enum CodingKeys: CodingKey {
@@ -81,7 +84,7 @@ public struct GraphQLOperation<Input: Encodable, Output: Decodable>: GraphQLOper
         request.setValue("TibberSwift", forHTTPHeaderField: "User-Agent")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue(apiKey, forHTTPHeaderField: "Authorization")
-        request.httpBody = try JSONEncoder().encode(self)
+        request.httpBody = try jsonEncoder.encode(self)
 
         return request
     }
