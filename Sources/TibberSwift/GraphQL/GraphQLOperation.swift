@@ -7,7 +7,7 @@ public enum GraphQLOperationError: Error {
     /// The query file was found, but the data for it could not be retrieved
     case noDataForQuery
 
-    /// The description for the error
+    /// The human readable error description
     public var errorDescription: String? {
         switch self {
         case .queryFileNotFound:
@@ -27,12 +27,23 @@ protocol GraphQLOperationDefinition {
 public struct GraphQLOperation<Input: Encodable, Output: Decodable>: GraphQLOperationDefinition, Encodable {
     private var input: Input
     private var operationString: String
+    private let url = URL(string: "https://api.tibber.com/v1-beta/gql")! // swiftlint:disable:this force_unwrapping
 
+    /// Init method used with Input and GraphQL query string
+    /// - Parameters:
+    ///   - input: The input encodable to use with the query
+    ///   - operationString: The operation string, aka graphQL query to use
     public init(input: Input, operationString: String) {
         self.input = input
         self.operationString = operationString
     }
 
+    /// Init method used with Input and reference to GraphQL query file
+    ///
+    /// The query file should be available in the same bundle as TibberSwift exists in.
+    /// - Parameters:
+    ///   - input: The input encodable to use with the query
+    ///   - queryFilename: The filename of the query file, excluding the extension. The query file's extension should be `.graphql`.
     public init(input: Input, queryFilename: String) throws {
         self.input = input
 
@@ -50,19 +61,20 @@ public struct GraphQLOperation<Input: Encodable, Output: Decodable>: GraphQLOper
         self.operationString = queryString
     }
 
-    private let url = URL(string: "https://api.tibber.com/v1-beta/gql")! // swiftlint:disable:this force_unwrapping
-
     private enum CodingKeys: CodingKey {
         case variables, query
     }
 
+    /// Encodes this value into the given encoder.
+    ///
+    /// - Parameter encoder: The encoder to write data to.
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(input, forKey: .variables)
         try container.encode(operationString, forKey: .query)
     }
 
-    public func getURLRequest(apiKey: String) throws -> URLRequest {
+    internal func getURLRequest(apiKey: String) throws -> URLRequest {
         var request = URLRequest(url: url)
 
         request.httpMethod = "POST"

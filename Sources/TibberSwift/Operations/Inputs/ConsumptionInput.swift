@@ -7,7 +7,7 @@ public enum ConsumptionResolution: String, Encodable {
     case monthly = "MONTHLY"
 }
 
-/// ``ConsumptionInput`` is used when using the ``Consumption`` operation. The operation uses this constant to set resolution and the amount for `last`.
+/// ``ConsumptionInput`` is used when using the ``Consumption`` operation. The operation uses this structure to set resolution and the amount for `last`.
 public struct ConsumptionInput: Encodable {
     let resolution: ConsumptionResolution
     let last: Int

@@ -1,0 +1,17 @@
+{
+  viewer {
+    homes {
+      currentSubscription{
+        priceInfo{
+          current{
+            total
+            energy
+            tax
+            startsAt
+            currency
+          }
+        }
+      }
+    }
+  }
+}

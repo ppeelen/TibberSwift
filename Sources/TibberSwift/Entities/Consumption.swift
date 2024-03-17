@@ -1,10 +1,10 @@
 import Foundation
 
-/// The Consumption constant
+/// The Consumption structure
 public struct Consumption: Codable {
-    /// A home constant for a consumption
+    /// A home structure for a consumption
     public struct Home: Codable {
-        /// A Home Consumption constant defining the nodes for each measurement
+        /// A Home Consumption structure defining the nodes for each measurement
         public struct Consumption: Codable {
             /// A measurement node
             public struct Node: Codable {

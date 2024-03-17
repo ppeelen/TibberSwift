@@ -117,6 +117,7 @@ public enum TibberSwiftError: LocalizedError {
     /// Thrown if the response from the HTTP call could not be decoded to the requested Output
     case decodingError
 
+    /// The human readable error description
     public var errorDescription: String? {
         switch self {
         case .invalidResponse:

@@ -11,10 +11,12 @@ struct TibberActionsView: View {
 
     @State private var loggedInUser: LoggedInUser?
     @State private var userLogin: UserLogin?
+    @State private var currentEnergyPrice: CurrentEnergyPrice?
     @State private var errorMessage: String?
 
     @State private var loggedInLoading = false
     @State private var userLoginLoading = false
+    @State private var currentEnergyPriceLoading = false
 
     init(apiKey: String) {
         self.apiKey = apiKey
@@ -70,6 +72,40 @@ struct TibberActionsView: View {
                         }
                     }
                 })
+                if let currentEnergyPrice {
+                    ForEach(currentEnergyPrice.homes) { home in
+                        VStack {
+                            HStack {
+                                Text("Total:")
+                                Spacer()
+                                Text("\(home.currentSubscription.priceInfo.current.total) \(home.currentSubscription.priceInfo.current.currency)")
+                            }
+                            HStack {
+                                Text("Tax:")
+                                Spacer()
+                                Text("\(home.currentSubscription.priceInfo.current.tax) \(home.currentSubscription.priceInfo.current.currency)")
+                            }
+                            .foregroundColor(.secondary)
+                            .font(.subheadline)
+                            HStack {
+                                Text("Starts at:")
+                                Spacer()
+                                Text("\(home.currentSubscription.priceInfo.current.startsAt, format: .dateTime)")
+                            }
+                            .foregroundColor(.secondary)
+                            .font(.subheadline)
+                        }
+                    }
+                }
+                Button(action: currentEnergyPriceAction, label: {
+                    HStack {
+                        Text("Get current energy price")
+                        if currentEnergyPriceLoading {
+                            Spacer()
+                            ProgressView()
+                        }
+                    }
+                })
             }
             if let errorMessage {
                 Text(errorMessage)
@@ -102,6 +138,20 @@ struct TibberActionsView: View {
             } catch {
                 errorMessage = error.localizedDescription
                 userLoginLoading = false
+            }
+        }
+    }
+
+    func currentEnergyPriceAction() {
+        currentEnergyPriceLoading = true
+        Task {
+            do {
+                let operation = try GraphQLOperation.currentEnergyPrice()
+                self.currentEnergyPrice = try await tibberSwift.customOperation(operation)
+                currentEnergyPriceLoading = false
+            } catch {
+                errorMessage = error.localizedDescription
+                currentEnergyPriceLoading = false
             }
         }
     }

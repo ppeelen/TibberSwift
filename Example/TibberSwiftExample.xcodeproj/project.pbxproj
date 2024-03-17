@@ -11,6 +11,8 @@
 		2A08D7EF2AD31BC400AEA27C /* HomesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A08D7EE2AD31BC400AEA27C /* HomesView.swift */; };
 		2A08D7F12AD3305C00AEA27C /* ConsumptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A08D7F02AD3305C00AEA27C /* ConsumptionView.swift */; };
 		2A08D7F42AD3461000AEA27C /* UserLoginOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A08D7F32AD3461000AEA27C /* UserLoginOperation.swift */; };
+		2A7FDABD2BA728690056AA62 /* CurrentEnergyPriceOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7FDABC2BA728690056AA62 /* CurrentEnergyPriceOperation.swift */; };
+		2A7FDAC02BA7289A0056AA62 /* CurrentEnergyPrice.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 2A7FDABF2BA7289A0056AA62 /* CurrentEnergyPrice.graphql */; };
 		2AFE4DD72AC3879F007EEEEE /* TibberSwiftExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE4DD62AC3879F007EEEEE /* TibberSwiftExampleApp.swift */; };
 		2AFE4DD92AC3879F007EEEEE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE4DD82AC3879F007EEEEE /* ContentView.swift */; };
 		2AFE4DDB2AC387A0007EEEEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AFE4DDA2AC387A0007EEEEE /* Assets.xcassets */; };
@@ -23,6 +25,8 @@
 		2A08D7EE2AD31BC400AEA27C /* HomesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomesView.swift; sourceTree = "<group>"; };
 		2A08D7F02AD3305C00AEA27C /* ConsumptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumptionView.swift; sourceTree = "<group>"; };
 		2A08D7F32AD3461000AEA27C /* UserLoginOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginOperation.swift; sourceTree = "<group>"; };
+		2A7FDABC2BA728690056AA62 /* CurrentEnergyPriceOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentEnergyPriceOperation.swift; sourceTree = "<group>"; };
+		2A7FDABF2BA7289A0056AA62 /* CurrentEnergyPrice.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = CurrentEnergyPrice.graphql; sourceTree = "<group>"; };
 		2AFE4DD32AC3879F007EEEEE /* TibberSwiftExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TibberSwiftExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AFE4DD62AC3879F007EEEEE /* TibberSwiftExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TibberSwiftExampleApp.swift; sourceTree = "<group>"; };
 		2AFE4DD82AC3879F007EEEEE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,8 +59,17 @@
 			isa = PBXGroup;
 			children = (
 				2A08D7F32AD3461000AEA27C /* UserLoginOperation.swift */,
+				2A7FDABC2BA728690056AA62 /* CurrentEnergyPriceOperation.swift */,
 			);
 			path = Operation;
+			sourceTree = "<group>";
+		};
+		2A7FDABE2BA7286F0056AA62 /* GraphQl */ = {
+			isa = PBXGroup;
+			children = (
+				2A7FDABF2BA7289A0056AA62 /* CurrentEnergyPrice.graphql */,
+			);
+			path = GraphQl;
 			sourceTree = "<group>";
 		};
 		2AFE4DCA2AC3879F007EEEEE = {
@@ -78,6 +91,7 @@
 		2AFE4DD52AC3879F007EEEEE /* TibberSwiftExample */ = {
 			isa = PBXGroup;
 			children = (
+				2A7FDABE2BA7286F0056AA62 /* GraphQl */,
 				2A08D7F22AD345BD00AEA27C /* Operation */,
 				2A08D7ED2AD2FBDF00AEA27C /* Actions */,
 				2AFE4DDA2AC387A0007EEEEE /* Assets.xcassets */,
@@ -161,6 +175,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A7FDAC02BA7289A0056AA62 /* CurrentEnergyPrice.graphql in Resources */,
 				2AFE4DDE2AC387A0007EEEEE /* Preview Assets.xcassets in Resources */,
 				2AFE4DDB2AC387A0007EEEEE /* Assets.xcassets in Resources */,
 			);
@@ -173,6 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A7FDABD2BA728690056AA62 /* CurrentEnergyPriceOperation.swift in Sources */,
 				2A08D7F12AD3305C00AEA27C /* ConsumptionView.swift in Sources */,
 				2AFE4DD92AC3879F007EEEEE /* ContentView.swift in Sources */,
 				2A08D7EF2AD31BC400AEA27C /* HomesView.swift in Sources */,

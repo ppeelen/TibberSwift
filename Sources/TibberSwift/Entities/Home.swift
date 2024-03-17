@@ -1,8 +1,8 @@
 import Foundation
 
-/// A Home constant defining the addresses of a user's home
+/// A Home structure defining the addresses of a user's home
 public struct Home: Codable {
-    /// The address constant defining a physical address of a home
+    /// The address structure defining a physical address of a home
     public struct Address: Codable {
         public let address1: String
         public let address2: String?
