@@ -1,5 +1,7 @@
 <p align="center">
-    <img src ="Sources/TibberSwift/TibberSwift.docc/Resources/documentation/icon@2x.png" alt="TibberSwift Logo" title="TibberSwift" height=200 />
+    <a href="https://ppeelen.github.io/TibberSwift/documentation/tibberswift/" target="_blank">
+        <img src ="Sources/TibberSwift/TibberSwift.docc/Resources/documentation/icon@2x.png" alt="TibberSwift Logo" title="TibberSwift" height=200 />
+    </a>
 </p>
 
 <p align="center">
@@ -29,6 +31,10 @@ add the query to the operation.
 
 ``TibberSwift`` functions by creating an operation which in turn sets an `Input` as well as an `Output`. The `Input` is of `Encodable` type and output of 
 `Decodable`. You can checkout the custom `UserLoginOperation` in the Example app to see how you can create an operation inside your application.
+
+## Documentation
+
+TibberSwift comes with documentation right inside Xcode, but this documentation is also available online via [https://ppeelen.github.io/TibberSwift/](https://ppeelen.github.io/TibberSwift/documentation/tibberswift/).
 
 ## Installation
 
