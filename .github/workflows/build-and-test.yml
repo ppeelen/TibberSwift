@@ -16,9 +16,11 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build
-      run: swift build -v
+      run: swift build
     - name: Run tests
       run: swift test --enable-test-discovery --enable-code-coverage
+    - name: Prepare Code Coverage
+      run: xcrun llvm-cov export -format="lcov" .build/debug/TibberSwiftPackageTests.xctest/Contents/MacOS/TibberSwiftPackageTests -instr-profile .build/debug/codecov/default.profdata > info.lcov
     - name: Upload coverage reports to Codecov
       uses: codecov/codecov-action@v4.0.1
       with:
