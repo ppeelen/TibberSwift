@@ -1,0 +1,1015 @@
+{
+  "data": {
+    "viewer": {
+      "homes": [
+        {
+          "id": "f2a876f3-e09e-4bba-af19-79b038893c3d",
+          "consumption": {
+            "nodes": [
+              {
+                "from": "2024-03-13T12:00:00.000+01:00",
+                "to": "2024-03-13T13:00:00.000+01:00",
+                "cost": 1.7705849,
+                "currency": "SEK",
+                "unitPrice": 0.9403,
+                "unitPriceVAT": 0.18806,
+                "consumption": 1.883,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-13T13:00:00.000+01:00",
+                "to": "2024-03-13T14:00:00.000+01:00",
+                "cost": 1.8514366,
+                "currency": "SEK",
+                "unitPrice": 0.90935,
+                "unitPriceVAT": 0.18187,
+                "consumption": 2.036,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-13T14:00:00.000+01:00",
+                "to": "2024-03-13T15:00:00.000+01:00",
+                "cost": 1.214582775,
+                "currency": "SEK",
+                "unitPrice": 0.899025,
+                "unitPriceVAT": 0.179805,
+                "consumption": 1.351,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-13T15:00:00.000+01:00",
+                "to": "2024-03-13T16:00:00.000+01:00",
+                "cost": 2.071290375,
+                "currency": "SEK",
+                "unitPrice": 0.8966625,
+                "unitPriceVAT": 0.1793325,
+                "consumption": 2.31,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-13T16:00:00.000+01:00",
+                "to": "2024-03-13T17:00:00.000+01:00",
+                "cost": 3.305332275,
+                "currency": "SEK",
+                "unitPrice": 0.928725,
+                "unitPriceVAT": 0.185745,
+                "consumption": 3.559,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-13T17:00:00.000+01:00",
+                "to": "2024-03-13T18:00:00.000+01:00",
+                "cost": 2.58418095,
+                "currency": "SEK",
+                "unitPrice": 0.984075,
+                "unitPriceVAT": 0.196815,
+                "consumption": 2.626,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-13T18:00:00.000+01:00",
+                "to": "2024-03-13T19:00:00.000+01:00",
+                "cost": 1.90043595,
+                "currency": "SEK",
+                "unitPrice": 0.9836625,
+                "unitPriceVAT": 0.1967325,
+                "consumption": 1.932,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-13T19:00:00.000+01:00",
+                "to": "2024-03-13T20:00:00.000+01:00",
+                "cost": 1.537411075,
+                "currency": "SEK",
+                "unitPrice": 0.8725375,
+                "unitPriceVAT": 0.1745075,
+                "consumption": 1.762,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-13T20:00:00.000+01:00",
+                "to": "2024-03-13T21:00:00.000+01:00",
+                "cost": 1.294694675,
+                "currency": "SEK",
+                "unitPrice": 0.603025,
+                "unitPriceVAT": 0.120605,
+                "consumption": 2.147,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-13T21:00:00.000+01:00",
+                "to": "2024-03-13T22:00:00.000+01:00",
+                "cost": 6.4549331875,
+                "currency": "SEK",
+                "unitPrice": 0.5358125,
+                "unitPriceVAT": 0.1071625,
+                "consumption": 12.047,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-13T22:00:00.000+01:00",
+                "to": "2024-03-13T23:00:00.000+01:00",
+                "cost": 5.422221075,
+                "currency": "SEK",
+                "unitPrice": 0.4663875,
+                "unitPriceVAT": 0.0932775,
+                "consumption": 11.626,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-13T23:00:00.000+01:00",
+                "to": "2024-03-14T00:00:00.000+01:00",
+                "cost": 3.1878172125,
+                "currency": "SEK",
+                "unitPrice": 0.2794125,
+                "unitPriceVAT": 0.0558825,
+                "consumption": 11.409,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-14T00:00:00.000+01:00",
+                "to": "2024-03-14T01:00:00.000+01:00",
+                "cost": 1.4843218875,
+                "currency": "SEK",
+                "unitPrice": 0.4716625,
+                "unitPriceVAT": 0.0943325,
+                "consumption": 3.147,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-14T01:00:00.000+01:00",
+                "to": "2024-03-14T02:00:00.000+01:00",
+                "cost": 4.6165136,
+                "currency": "SEK",
+                "unitPrice": 0.398525,
+                "unitPriceVAT": 0.079705,
+                "consumption": 11.584,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-14T02:00:00.000+01:00",
+                "to": "2024-03-14T03:00:00.000+01:00",
+                "cost": 4.462998925,
+                "currency": "SEK",
+                "unitPrice": 0.3711125,
+                "unitPriceVAT": 0.0742225,
+                "consumption": 12.026,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-14T03:00:00.000+01:00",
+                "to": "2024-03-14T04:00:00.000+01:00",
+                "cost": 2.7523396,
+                "currency": "SEK",
+                "unitPrice": 0.286225,
+                "unitPriceVAT": 0.057245,
+                "consumption": 9.616,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-14T04:00:00.000+01:00",
+                "to": "2024-03-14T05:00:00.000+01:00",
+                "cost": 0.920312325,
+                "currency": "SEK",
+                "unitPrice": 0.3045375,
+                "unitPriceVAT": 0.0609075,
+                "consumption": 3.022,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-14T05:00:00.000+01:00",
+                "to": "2024-03-14T06:00:00.000+01:00",
+                "cost": 0.8800707,
+                "currency": "SEK",
+                "unitPrice": 0.383975,
+                "unitPriceVAT": 0.076795,
+                "consumption": 2.292,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-14T06:00:00.000+01:00",
+                "to": "2024-03-14T07:00:00.000+01:00",
+                "cost": 0.9055111625,
+                "currency": "SEK",
+                "unitPrice": 0.4808875,
+                "unitPriceVAT": 0.0961775,
+                "consumption": 1.883,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-14T07:00:00.000+01:00",
+                "to": "2024-03-14T08:00:00.000+01:00",
+                "cost": 0.7730329125,
+                "currency": "SEK",
+                "unitPrice": 0.5298375,
+                "unitPriceVAT": 0.1059675,
+                "consumption": 1.459,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-14T08:00:00.000+01:00",
+                "to": "2024-03-14T09:00:00.000+01:00",
+                "cost": 0.6936238125,
+                "currency": "SEK",
+                "unitPrice": 0.5315125,
+                "unitPriceVAT": 0.1063025,
+                "consumption": 1.305,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-14T09:00:00.000+01:00",
+                "to": "2024-03-14T10:00:00.000+01:00",
+                "cost": 0.501730675,
+                "currency": "SEK",
+                "unitPrice": 0.526475,
+                "unitPriceVAT": 0.105295,
+                "consumption": 0.953,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-14T10:00:00.000+01:00",
+                "to": "2024-03-14T11:00:00.000+01:00",
+                "cost": 0.4854712625,
+                "currency": "SEK",
+                "unitPrice": 0.5294125,
+                "unitPriceVAT": 0.1058825,
+                "consumption": 0.917,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-14T11:00:00.000+01:00",
+                "to": "2024-03-14T12:00:00.000+01:00",
+                "cost": 0.684448425,
+                "currency": "SEK",
+                "unitPrice": 0.533475,
+                "unitPriceVAT": 0.106695,
+                "consumption": 1.283,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-14T12:00:00.000+01:00",
+                "to": "2024-03-14T13:00:00.000+01:00",
+                "cost": 0.9389093625,
+                "currency": "SEK",
+                "unitPrice": 0.5242375,
+                "unitPriceVAT": 0.1048475,
+                "consumption": 1.791,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-14T13:00:00.000+01:00",
+                "to": "2024-03-14T14:00:00.000+01:00",
+                "cost": 0.9984468375,
+                "currency": "SEK",
+                "unitPrice": 0.5112375,
+                "unitPriceVAT": 0.1022475,
+                "consumption": 1.953,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-14T14:00:00.000+01:00",
+                "to": "2024-03-14T15:00:00.000+01:00",
+                "cost": 0.584844,
+                "currency": "SEK",
+                "unitPrice": 0.489,
+                "unitPriceVAT": 0.0978,
+                "consumption": 1.196,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-14T15:00:00.000+01:00",
+                "to": "2024-03-14T16:00:00.000+01:00",
+                "cost": 0.7888782,
+                "currency": "SEK",
+                "unitPrice": 0.4539,
+                "unitPriceVAT": 0.09078,
+                "consumption": 1.738,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-14T16:00:00.000+01:00",
+                "to": "2024-03-14T17:00:00.000+01:00",
+                "cost": 1.116445275,
+                "currency": "SEK",
+                "unitPrice": 0.417675,
+                "unitPriceVAT": 0.083535,
+                "consumption": 2.673,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-14T17:00:00.000+01:00",
+                "to": "2024-03-14T18:00:00.000+01:00",
+                "cost": 0.9563038875,
+                "currency": "SEK",
+                "unitPrice": 0.3979625,
+                "unitPriceVAT": 0.0795925,
+                "consumption": 2.403,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-14T18:00:00.000+01:00",
+                "to": "2024-03-14T19:00:00.000+01:00",
+                "cost": 1.3742672,
+                "currency": "SEK",
+                "unitPrice": 0.4304,
+                "unitPriceVAT": 0.08608,
+                "consumption": 3.193,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-14T19:00:00.000+01:00",
+                "to": "2024-03-14T20:00:00.000+01:00",
+                "cost": 1.3068739125,
+                "currency": "SEK",
+                "unitPrice": 0.3758625,
+                "unitPriceVAT": 0.0751725,
+                "consumption": 3.477,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-14T20:00:00.000+01:00",
+                "to": "2024-03-14T21:00:00.000+01:00",
+                "cost": 1.03420935,
+                "currency": "SEK",
+                "unitPrice": 0.3045375,
+                "unitPriceVAT": 0.0609075,
+                "consumption": 3.396,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-14T21:00:00.000+01:00",
+                "to": "2024-03-14T22:00:00.000+01:00",
+                "cost": 0.455156225,
+                "currency": "SEK",
+                "unitPrice": 0.153925,
+                "unitPriceVAT": 0.030785,
+                "consumption": 2.957,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-14T22:00:00.000+01:00",
+                "to": "2024-03-14T23:00:00.000+01:00",
+                "cost": 0.215500075,
+                "currency": "SEK",
+                "unitPrice": 0.106525,
+                "unitPriceVAT": 0.021305,
+                "consumption": 2.023,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-14T23:00:00.000+01:00",
+                "to": "2024-03-15T00:00:00.000+01:00",
+                "cost": 0.1583903125,
+                "currency": "SEK",
+                "unitPrice": 0.1038625,
+                "unitPriceVAT": 0.0207725,
+                "consumption": 1.525,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-15T00:00:00.000+01:00",
+                "to": "2024-03-15T01:00:00.000+01:00",
+                "cost": 0.071061025,
+                "currency": "SEK",
+                "unitPrice": 0.1035875,
+                "unitPriceVAT": 0.0207175,
+                "consumption": 0.686,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-15T01:00:00.000+01:00",
+                "to": "2024-03-15T02:00:00.000+01:00",
+                "cost": 0.10565925,
+                "currency": "SEK",
+                "unitPrice": 0.1035875,
+                "unitPriceVAT": 0.0207175,
+                "consumption": 1.02,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-15T02:00:00.000+01:00",
+                "to": "2024-03-15T03:00:00.000+01:00",
+                "cost": 0.128515275,
+                "currency": "SEK",
+                "unitPrice": 0.103725,
+                "unitPriceVAT": 0.020745,
+                "consumption": 1.239,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-15T03:00:00.000+01:00",
+                "to": "2024-03-15T04:00:00.000+01:00",
+                "cost": 0.1383895125,
+                "currency": "SEK",
+                "unitPrice": 0.1042875,
+                "unitPriceVAT": 0.0208575,
+                "consumption": 1.327,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-15T04:00:00.000+01:00",
+                "to": "2024-03-15T05:00:00.000+01:00",
+                "cost": 0.2059987125,
+                "currency": "SEK",
+                "unitPrice": 0.1052625,
+                "unitPriceVAT": 0.0210525,
+                "consumption": 1.957,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-15T05:00:00.000+01:00",
+                "to": "2024-03-15T06:00:00.000+01:00",
+                "cost": 0.6298128,
+                "currency": "SEK",
+                "unitPrice": 0.2928,
+                "unitPriceVAT": 0.05856,
+                "consumption": 2.151,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-15T06:00:00.000+01:00",
+                "to": "2024-03-15T07:00:00.000+01:00",
+                "cost": 0.992072925,
+                "currency": "SEK",
+                "unitPrice": 0.4867875,
+                "unitPriceVAT": 0.0973575,
+                "consumption": 2.038,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-15T07:00:00.000+01:00",
+                "to": "2024-03-15T08:00:00.000+01:00",
+                "cost": 0.7038153,
+                "currency": "SEK",
+                "unitPrice": 0.600525,
+                "unitPriceVAT": 0.120105,
+                "consumption": 1.172,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-15T08:00:00.000+01:00",
+                "to": "2024-03-15T09:00:00.000+01:00",
+                "cost": 0.4181475,
+                "currency": "SEK",
+                "unitPrice": 0.6585,
+                "unitPriceVAT": 0.1317,
+                "consumption": 0.635,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-15T09:00:00.000+01:00",
+                "to": "2024-03-15T10:00:00.000+01:00",
+                "cost": 0.2702139875,
+                "currency": "SEK",
+                "unitPrice": 0.6946375,
+                "unitPriceVAT": 0.1389275,
+                "consumption": 0.389,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-15T10:00:00.000+01:00",
+                "to": "2024-03-15T11:00:00.000+01:00",
+                "cost": 0.4086461,
+                "currency": "SEK",
+                "unitPrice": 0.734975,
+                "unitPriceVAT": 0.146995,
+                "consumption": 0.556,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-15T11:00:00.000+01:00",
+                "to": "2024-03-15T12:00:00.000+01:00",
+                "cost": 0.2962110375,
+                "currency": "SEK",
+                "unitPrice": 0.6538875,
+                "unitPriceVAT": 0.1307775,
+                "consumption": 0.453,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-15T12:00:00.000+01:00",
+                "to": "2024-03-15T13:00:00.000+01:00",
+                "cost": 0.8366725875,
+                "currency": "SEK",
+                "unitPrice": 0.6421125,
+                "unitPriceVAT": 0.1284225,
+                "consumption": 1.303,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-15T13:00:00.000+01:00",
+                "to": "2024-03-15T14:00:00.000+01:00",
+                "cost": 1.05620235,
+                "currency": "SEK",
+                "unitPrice": 0.63665,
+                "unitPriceVAT": 0.12733,
+                "consumption": 1.659,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-15T14:00:00.000+01:00",
+                "to": "2024-03-15T15:00:00.000+01:00",
+                "cost": 0.6567094875,
+                "currency": "SEK",
+                "unitPrice": 0.7192875,
+                "unitPriceVAT": 0.1438575,
+                "consumption": 0.913,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-15T15:00:00.000+01:00",
+                "to": "2024-03-15T16:00:00.000+01:00",
+                "cost": 0.859171275,
+                "currency": "SEK",
+                "unitPrice": 0.809775,
+                "unitPriceVAT": 0.161955,
+                "consumption": 1.061,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-15T16:00:00.000+01:00",
+                "to": "2024-03-15T17:00:00.000+01:00",
+                "cost": 1.0965341625,
+                "currency": "SEK",
+                "unitPrice": 0.8313375,
+                "unitPriceVAT": 0.1662675,
+                "consumption": 1.319,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-15T17:00:00.000+01:00",
+                "to": "2024-03-15T18:00:00.000+01:00",
+                "cost": 2.135744,
+                "currency": "SEK",
+                "unitPrice": 0.884,
+                "unitPriceVAT": 0.1768,
+                "consumption": 2.416,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-15T18:00:00.000+01:00",
+                "to": "2024-03-15T19:00:00.000+01:00",
+                "cost": 1.87489305,
+                "currency": "SEK",
+                "unitPrice": 0.900525,
+                "unitPriceVAT": 0.180105,
+                "consumption": 2.082,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-15T19:00:00.000+01:00",
+                "to": "2024-03-15T20:00:00.000+01:00",
+                "cost": 1.3505235625,
+                "currency": "SEK",
+                "unitPrice": 0.8362375,
+                "unitPriceVAT": 0.1672475,
+                "consumption": 1.615,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-15T20:00:00.000+01:00",
+                "to": "2024-03-15T21:00:00.000+01:00",
+                "cost": 2.362997,
+                "currency": "SEK",
+                "unitPrice": 0.7903,
+                "unitPriceVAT": 0.15806,
+                "consumption": 2.99,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-15T21:00:00.000+01:00",
+                "to": "2024-03-15T22:00:00.000+01:00",
+                "cost": 2.3662862,
+                "currency": "SEK",
+                "unitPrice": 0.72055,
+                "unitPriceVAT": 0.14411,
+                "consumption": 3.284,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-15T22:00:00.000+01:00",
+                "to": "2024-03-15T23:00:00.000+01:00",
+                "cost": 2.4638373375,
+                "currency": "SEK",
+                "unitPrice": 0.6653625,
+                "unitPriceVAT": 0.1330725,
+                "consumption": 3.703,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-15T23:00:00.000+01:00",
+                "to": "2024-03-16T00:00:00.000+01:00",
+                "cost": 0.7704463125,
+                "currency": "SEK",
+                "unitPrice": 0.6404375,
+                "unitPriceVAT": 0.1280875,
+                "consumption": 1.203,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-16T00:00:00.000+01:00",
+                "to": "2024-03-16T01:00:00.000+01:00",
+                "cost": 0.9246654,
+                "currency": "SEK",
+                "unitPrice": 0.64035,
+                "unitPriceVAT": 0.12807,
+                "consumption": 1.444,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-16T01:00:00.000+01:00",
+                "to": "2024-03-16T02:00:00.000+01:00",
+                "cost": 0.4697888625,
+                "currency": "SEK",
+                "unitPrice": 0.6409125,
+                "unitPriceVAT": 0.1281825,
+                "consumption": 0.733,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-16T02:00:00.000+01:00",
+                "to": "2024-03-16T03:00:00.000+01:00",
+                "cost": 0.3676764,
+                "currency": "SEK",
+                "unitPrice": 0.621075,
+                "unitPriceVAT": 0.124215,
+                "consumption": 0.592,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-16T03:00:00.000+01:00",
+                "to": "2024-03-16T04:00:00.000+01:00",
+                "cost": 0.404318725,
+                "currency": "SEK",
+                "unitPrice": 0.606175,
+                "unitPriceVAT": 0.121235,
+                "consumption": 0.667,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-16T04:00:00.000+01:00",
+                "to": "2024-03-16T05:00:00.000+01:00",
+                "cost": 0.5263011125,
+                "currency": "SEK",
+                "unitPrice": 0.5960375,
+                "unitPriceVAT": 0.1192075,
+                "consumption": 0.883,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-16T05:00:00.000+01:00",
+                "to": "2024-03-16T06:00:00.000+01:00",
+                "cost": 1.0478619375,
+                "currency": "SEK",
+                "unitPrice": 0.5870375,
+                "unitPriceVAT": 0.1174075,
+                "consumption": 1.785,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-16T06:00:00.000+01:00",
+                "to": "2024-03-16T07:00:00.000+01:00",
+                "cost": 1.1723007,
+                "currency": "SEK",
+                "unitPrice": 0.587325,
+                "unitPriceVAT": 0.117465,
+                "consumption": 1.996,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-16T07:00:00.000+01:00",
+                "to": "2024-03-16T08:00:00.000+01:00",
+                "cost": 1.1098127625,
+                "currency": "SEK",
+                "unitPrice": 0.6054625,
+                "unitPriceVAT": 0.1210925,
+                "consumption": 1.833,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-16T08:00:00.000+01:00",
+                "to": "2024-03-16T09:00:00.000+01:00",
+                "cost": 0.5176542,
+                "currency": "SEK",
+                "unitPrice": 0.6267,
+                "unitPriceVAT": 0.12534,
+                "consumption": 0.826,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-16T09:00:00.000+01:00",
+                "to": "2024-03-16T10:00:00.000+01:00",
+                "cost": 0.7245525375,
+                "currency": "SEK",
+                "unitPrice": 0.6521625,
+                "unitPriceVAT": 0.1304325,
+                "consumption": 1.111,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-16T10:00:00.000+01:00",
+                "to": "2024-03-16T11:00:00.000+01:00",
+                "cost": 0.6248809,
+                "currency": "SEK",
+                "unitPrice": 0.6563875,
+                "unitPriceVAT": 0.1312775,
+                "consumption": 0.952,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-16T11:00:00.000+01:00",
+                "to": "2024-03-16T12:00:00.000+01:00",
+                "cost": 0.883028025,
+                "currency": "SEK",
+                "unitPrice": 0.6521625,
+                "unitPriceVAT": 0.1304325,
+                "consumption": 1.354,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-16T12:00:00.000+01:00",
+                "to": "2024-03-16T13:00:00.000+01:00",
+                "cost": 1.1089662375,
+                "currency": "SEK",
+                "unitPrice": 0.6089875,
+                "unitPriceVAT": 0.1217975,
+                "consumption": 1.821,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-16T13:00:00.000+01:00",
+                "to": "2024-03-16T14:00:00.000+01:00",
+                "cost": 4.806464775,
+                "currency": "SEK",
+                "unitPrice": 0.413175,
+                "unitPriceVAT": 0.082635,
+                "consumption": 11.633,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-16T14:00:00.000+01:00",
+                "to": "2024-03-16T15:00:00.000+01:00",
+                "cost": 3.41821875,
+                "currency": "SEK",
+                "unitPrice": 0.28785,
+                "unitPriceVAT": 0.05757,
+                "consumption": 11.875,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-16T15:00:00.000+01:00",
+                "to": "2024-03-16T16:00:00.000+01:00",
+                "cost": 0.7767577,
+                "currency": "SEK",
+                "unitPrice": 0.51305,
+                "unitPriceVAT": 0.10261,
+                "consumption": 1.514,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-16T16:00:00.000+01:00",
+                "to": "2024-03-16T17:00:00.000+01:00",
+                "cost": 1.17646885,
+                "currency": "SEK",
+                "unitPrice": 0.586475,
+                "unitPriceVAT": 0.117295,
+                "consumption": 2.006,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-16T17:00:00.000+01:00",
+                "to": "2024-03-16T18:00:00.000+01:00",
+                "cost": 1.4468021125,
+                "currency": "SEK",
+                "unitPrice": 0.6427375,
+                "unitPriceVAT": 0.1285475,
+                "consumption": 2.251,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-16T18:00:00.000+01:00",
+                "to": "2024-03-16T19:00:00.000+01:00",
+                "cost": 3.30372835,
+                "currency": "SEK",
+                "unitPrice": 0.638525,
+                "unitPriceVAT": 0.127705,
+                "consumption": 5.174,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-16T19:00:00.000+01:00",
+                "to": "2024-03-16T20:00:00.000+01:00",
+                "cost": 2.4011340625,
+                "currency": "SEK",
+                "unitPrice": 0.5715625,
+                "unitPriceVAT": 0.1143125,
+                "consumption": 4.201,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-16T20:00:00.000+01:00",
+                "to": "2024-03-16T21:00:00.000+01:00",
+                "cost": 1.44540375,
+                "currency": "SEK",
+                "unitPrice": 0.52275,
+                "unitPriceVAT": 0.10455,
+                "consumption": 2.765,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-16T21:00:00.000+01:00",
+                "to": "2024-03-16T22:00:00.000+01:00",
+                "cost": 1.5683487875,
+                "currency": "SEK",
+                "unitPrice": 0.5113625,
+                "unitPriceVAT": 0.1022725,
+                "consumption": 3.067,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-16T22:00:00.000+01:00",
+                "to": "2024-03-16T23:00:00.000+01:00",
+                "cost": 4.8827458875,
+                "currency": "SEK",
+                "unitPrice": 0.4619875,
+                "unitPriceVAT": 0.0923975,
+                "consumption": 10.569,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-16T23:00:00.000+01:00",
+                "to": "2024-03-17T00:00:00.000+01:00",
+                "cost": 3.8369221,
+                "currency": "SEK",
+                "unitPrice": 0.344675,
+                "unitPriceVAT": 0.068935,
+                "consumption": 11.132,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-17T00:00:00.000+01:00",
+                "to": "2024-03-17T01:00:00.000+01:00",
+                "cost": 5.65506585,
+                "currency": "SEK",
+                "unitPrice": 0.4774625,
+                "unitPriceVAT": 0.0954925,
+                "consumption": 11.844,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-17T01:00:00.000+01:00",
+                "to": "2024-03-17T02:00:00.000+01:00",
+                "cost": 0.9423379875,
+                "currency": "SEK",
+                "unitPrice": 0.4931125,
+                "unitPriceVAT": 0.0986225,
+                "consumption": 1.911,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-17T02:00:00.000+01:00",
+                "to": "2024-03-17T03:00:00.000+01:00",
+                "cost": 0.5007325625,
+                "currency": "SEK",
+                "unitPrice": 0.5156875,
+                "unitPriceVAT": 0.1031375,
+                "consumption": 0.971,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-17T03:00:00.000+01:00",
+                "to": "2024-03-17T04:00:00.000+01:00",
+                "cost": 0.4893330375,
+                "currency": "SEK",
+                "unitPrice": 0.5324625,
+                "unitPriceVAT": 0.1064925,
+                "consumption": 0.919,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-17T04:00:00.000+01:00",
+                "to": "2024-03-17T05:00:00.000+01:00",
+                "cost": 0.99031205,
+                "currency": "SEK",
+                "unitPrice": 0.5994625,
+                "unitPriceVAT": 0.1198925,
+                "consumption": 1.652,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-17T05:00:00.000+01:00",
+                "to": "2024-03-17T06:00:00.000+01:00",
+                "cost": 1.4864715,
+                "currency": "SEK",
+                "unitPrice": 0.6477,
+                "unitPriceVAT": 0.12954,
+                "consumption": 2.295,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-17T06:00:00.000+01:00",
+                "to": "2024-03-17T07:00:00.000+01:00",
+                "cost": 1.731030575,
+                "currency": "SEK",
+                "unitPrice": 0.6874625,
+                "unitPriceVAT": 0.1374925,
+                "consumption": 2.518,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-17T07:00:00.000+01:00",
+                "to": "2024-03-17T08:00:00.000+01:00",
+                "cost": 2.564071225,
+                "currency": "SEK",
+                "unitPrice": 0.799025,
+                "unitPriceVAT": 0.159805,
+                "consumption": 3.209,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-17T08:00:00.000+01:00",
+                "to": "2024-03-17T09:00:00.000+01:00",
+                "cost": 1.1851911,
+                "currency": "SEK",
+                "unitPrice": 0.802975,
+                "unitPriceVAT": 0.160595,
+                "consumption": 1.476,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-17T09:00:00.000+01:00",
+                "to": "2024-03-17T10:00:00.000+01:00",
+                "cost": 3.060427075,
+                "currency": "SEK",
+                "unitPrice": 0.7701125,
+                "unitPriceVAT": 0.1540225,
+                "consumption": 3.974,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-17T10:00:00.000+01:00",
+                "to": "2024-03-17T11:00:00.000+01:00",
+                "cost": 1.9433555625,
+                "currency": "SEK",
+                "unitPrice": 0.7454375,
+                "unitPriceVAT": 0.1490875,
+                "consumption": 2.607,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-17T11:00:00.000+01:00",
+                "to": "2024-03-17T12:00:00.000+01:00",
+                "cost": 3.112857,
+                "currency": "SEK",
+                "unitPrice": 0.752625,
+                "unitPriceVAT": 0.150525,
+                "consumption": 4.136,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-17T12:00:00.000+01:00",
+                "to": "2024-03-17T13:00:00.000+01:00",
+                "cost": 1.941966,
+                "currency": "SEK",
+                "unitPrice": 0.6948,
+                "unitPriceVAT": 0.13896,
+                "consumption": 2.795,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-17T13:00:00.000+01:00",
+                "to": "2024-03-17T14:00:00.000+01:00",
+                "cost": 1.4683244625,
+                "currency": "SEK",
+                "unitPrice": 0.6713875,
+                "unitPriceVAT": 0.1342775,
+                "consumption": 2.187,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-17T14:00:00.000+01:00",
+                "to": "2024-03-17T15:00:00.000+01:00",
+                "cost": 2.4964566,
+                "currency": "SEK",
+                "unitPrice": 0.766725,
+                "unitPriceVAT": 0.153345,
+                "consumption": 3.256,
+                "consumptionUnit": "kWh"
+              },
+              {
+                "from": "2024-03-17T15:00:00.000+01:00",
+                "to": "2024-03-17T16:00:00.000+01:00",
+                "cost": 1.772097075,
+                "currency": "SEK",
+                "unitPrice": 0.8712375,
+                "unitPriceVAT": 0.1742475,
+                "consumption": 2.034,
+                "consumptionUnit": "kWh"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

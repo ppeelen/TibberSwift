@@ -1,0 +1,34 @@
+{
+  "data": {
+    "viewer": {
+      "homes": [
+        {
+          "id": "f2a876f3-e09e-4bba-af19-79b038893c3d",
+          "address": {
+            "address1": "One Apple Park Way",
+            "address2": null,
+            "address3": null,
+            "postalCode": "95014",
+            "city": "Cupertino",
+            "country": "US",
+            "latitude": "37.334606",
+            "longitude": "-122.009102"
+          }
+        },
+        {
+          "id": "e6bbdcc2-5878-41a2-b89d-b49aca5df2eb",
+          "address": {
+            "address1": "Apple Infinite Loop",
+            "address2": null,
+            "address3": null,
+            "postalCode": "12345",
+            "city": "Cupertino",
+            "country": "US",
+            "latitude": "37.33182",
+            "longitude": "-122.03118"
+          }
+        }
+      ]
+    }
+  }
+}

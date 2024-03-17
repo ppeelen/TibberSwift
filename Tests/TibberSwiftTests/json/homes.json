@@ -1,0 +1,21 @@
+{
+  "data": {
+    "viewer": {
+      "homes": [
+        {
+          "id": "f2a876f3-e09e-4bba-af19-79b038893c3d",
+          "address": {
+            "address1": "One Apple Park Way",
+            "address2": null,
+            "address3": null,
+            "postalCode": "95014",
+            "city": "Cupertino",
+            "country": "US",
+            "latitude": "37.334606",
+            "longitude": "-122.009102"
+          }
+        }
+      ]
+    }
+  }
+}

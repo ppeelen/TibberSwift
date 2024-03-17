@@ -22,6 +22,10 @@ let package = Package(
             ]),
         .testTarget(
             name: "TibberSwiftTests",
-            dependencies: ["TibberSwift"]),
+            dependencies: ["TibberSwift"],
+            resources: [
+                .copy("json")
+            ]
+        )
     ]
 )

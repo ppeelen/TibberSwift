@@ -9,7 +9,7 @@ public final class TibberSwift {
     private let apiKey: String
 
     private let jsonDecoder: JSONDecoder
-    private let urlSession: URLSession
+    private let urlSession: URLSessionDefinition
 
     private let log = Logger(
         subsystem: Bundle.main.bundleIdentifier!,
@@ -18,14 +18,12 @@ public final class TibberSwift {
 
     /// The init method for ``TibberSwift``, requires the ApiKey to be send in. This can be fetched from [https://developer.tibber.com](https://developer.tibber.com/settings/access-token)
     /// - Parameter apiKey: The API Key from Tibber
-    public init(apiKey: String) {
-        self.apiKey = apiKey
-        self.jsonDecoder = JSONDecoder()
-        self.urlSession = URLSession.shared
+    public convenience init(apiKey: String) {
+        self.init(apiKey: apiKey, jsonDecoder: JSONDecoder(), urlSession: URLSession.shared)
     }
 
     /// Meant for dependency injection while using tests
-    internal init(apiKey: String, jsonDecoder: JSONDecoder = JSONDecoder(), urlSession: URLSession = URLSession.shared) {
+    internal init(apiKey: String, jsonDecoder: JSONDecoder = JSONDecoder(), urlSession: URLSessionDefinition = URLSession.shared) {
         self.apiKey = apiKey
         self.jsonDecoder = jsonDecoder
         self.urlSession = urlSession
@@ -129,3 +127,17 @@ public enum TibberSwiftError: LocalizedError {
         }
     }
 }
+
+extension TibberSwiftError: Equatable { }
+
+protocol URLSessionDefinition {
+    func data(for request: URLRequest, delegate: (URLSessionTaskDelegate)?) async throws -> (Data, URLResponse)
+}
+
+extension URLSessionDefinition {
+    func data(for request: URLRequest, delegate: (URLSessionTaskDelegate)? = nil) async throws -> (Data, URLResponse) {
+        try await data(for: request, delegate: delegate)
+    }
+}
+
+extension URLSession: URLSessionDefinition { }
