@@ -1,0 +1,28 @@
+{
+  "configurations" : [
+    {
+      "id" : "1E527E4E-5A11-46DF-8D3C-AA12836E8E6D",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:",
+      "identifier" : "TibberSwift",
+      "name" : "TibberSwift"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "TibberSwiftTests",
+        "name" : "TibberSwiftTests"
+      }
+    }
+  ],
+  "version" : 1
+}

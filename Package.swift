@@ -24,7 +24,8 @@ let package = Package(
             name: "TibberSwiftTests",
             dependencies: ["TibberSwift"],
             resources: [
-                .copy("json")
+                .copy("json"),
+                .copy("Operations")
             ]
         )
     ]
