@@ -1,24 +1,23 @@
 import Foundation
 
-struct PriceInfoElement: Codable {
-    let total: Double
-    let energy: Double
-    let tax: Double
-    let startsAt: Date
-    let currency: String
-}
-
 /// The  structure of the user's price info today
 public struct PriceInfoToday: Codable {
-    struct Home: Codable, Identifiable {
-        struct CurrentSubscription: Codable {
-            struct PriceInfo: Codable {
-                let today: [PriceInfoElement]
+    public struct Home: Codable, Identifiable {
+        public struct CurrentSubscription: Codable {
+            public struct PriceInfo: Codable {
+                public struct PriceInfoElement: Codable {
+                    public let total: Double
+                    public let energy: Double
+                    public let tax: Double
+                    public let startsAt: Date
+                    public let currency: String
+                }
+                public let today: [PriceInfoElement]
             }
-            let priceInfo: PriceInfo
+            public let priceInfo: PriceInfo
         }
-        let currentSubscription: CurrentSubscription
-        let id: UUID
+        public let currentSubscription: CurrentSubscription
+        public let id: UUID
     }
-    let homes: [Home]
+    public let homes: [Home]
 }
