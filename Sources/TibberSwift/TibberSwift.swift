@@ -54,6 +54,13 @@ public extension TibberSwift {
         let operation = try GraphQLOperation.consumption(resolution: .hourly, last: 100)
         return try await performOperation(operation)
     }
+    
+    /// Fetches the user's price information of today
+    /// - Returns: A list of all price information
+    func priceInfoToday() async throws -> PriceInfoToday {
+        let operation = try GraphQLOperation.priceInfoToday()
+        return try await performOperation(operation)
+    }
 
     /// Custom GraphQL operation
     /// - Parameter operation: The operation in question
