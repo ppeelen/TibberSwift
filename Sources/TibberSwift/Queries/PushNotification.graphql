@@ -1,0 +1,10 @@
+query consumption($resolution: EnergyResolution!, $last: Int!){
+mutation{
+  sendPushNotification(input: {
+    title: "Notification through API",
+    message: "Hello from me!!"
+  }){
+    successful
+    pushedToNumberOfDevices
+  }
+}

@@ -54,6 +54,13 @@ public extension TibberSwift {
         let operation = try GraphQLOperation.consumption(resolution: .hourly, last: 100)
         return try await performOperation(operation)
     }
+    
+    /// Fetches the latest 100 hourly consumptions for all user's homes
+    /// - Returns: A list of the last 100 measured consumptions
+    func pushNotification(title: String, message: String) async throws -> PushNotificationResult {
+        let operation = try GraphQLOperation.pushNotification(title: title, message: message)
+        return try await performOperation(operation)
+    }
 
     /// Custom GraphQL operation
     /// - Parameter operation: The operation in question
