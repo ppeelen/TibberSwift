@@ -36,7 +36,7 @@ struct GraphQLResult<T: Decodable>: Decodable {
 
         let dataObj = try container.decodeIfPresent(ViewerResult<T>.self, forKey: .data)
         if let view = dataObj?.viewer {
-            self.object = dataObj?.viewer
+            self.object = view
         } else {
             self.object = try container.decodeIfPresent(T.self, forKey: .data)
         }
