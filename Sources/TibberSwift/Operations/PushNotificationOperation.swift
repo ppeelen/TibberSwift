@@ -4,8 +4,8 @@ public extension GraphQLOperation where Input == EmptyInput, Output == PushNotif
 
     /// Sends a push notification to all logged-in devices of the user
     /// - Parameters:
-    ///   - title: The type of EnergyResolution (Hourly, daily or monthly)
-    ///   - message: Message of the push notification
+    ///   - title: Title of the notification
+    ///   - message: Message of the notification
     /// - Returns: ``GraphQLOperation`` for the notification
     static func pushNotification(
         title: String,

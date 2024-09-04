@@ -55,9 +55,12 @@ public extension TibberSwift {
         return try await performOperation(operation)
     }
     
-    /// Fetches the latest 100 hourly consumptions for all user's homes
-    /// - Returns: A list of the last 100 measured consumptions
-    func pushNotification(title: String, message: String) async throws -> PushNotificationResult {
+    /// Sends a push notification to all logged-in devices of the user
+    /// - Parameters:
+    ///   - title: Title of the notification
+    ///   - message: Message of the notification
+    /// - Returns: ``PushNotificationResult`` for the notification
+    func sendPushNotification(title: String, message: String) async throws -> PushNotificationResult {
         let operation = try GraphQLOperation.pushNotification(title: title, message: message)
         return try await performOperation(operation)
     }
