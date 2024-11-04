@@ -2,7 +2,7 @@
 // https://docs.swift.org/swift-book
 
 import Foundation
-import os.log
+import Logging
 
 /// ``TibberSwift`` is a simple SPM that helps you create queries towards Tibber's GraphQL server.
 public final class TibberSwift {
@@ -11,10 +11,7 @@ public final class TibberSwift {
     private let jsonDecoder: JSONDecoder
     private let urlSession: URLSessionDefinition
 
-    private let log = Logger(
-        subsystem: Bundle.main.bundleIdentifier!,
-        category: String(describing: TibberSwift.self)
-    )
+    private let logger = Logger(label: "io.github.ppeelencom.TibberSwift")
 
     /// The init method for ``TibberSwift``, requires the ApiKey to be send in. This can be fetched from [https://developer.tibber.com](https://developer.tibber.com/settings/access-token)
     /// - Parameter apiKey: The API Key from Tibber
@@ -69,26 +66,24 @@ private extension TibberSwift {
     /// - Parameter operation: The operation to preform
     /// - Returns: The output for the operation
     func performOperation<Input, Output>(_ operation: GraphQLOperation<Input, Output>) async throws -> Output {
-        log.info("Initiating new request.")
+        logger.info("Initiating new request.")
 
         let request = try operation.getURLRequest(apiKey: apiKey)
 
-        log.info("URL: \(request.url!, privacy: .private)") // swiftlint:disable:this force_unwrapping
-
         let (data, response) = try await urlSession.data(for: request)
 
-        log.info("Received response. Got data of \(data.count, privacy: .public) bytes.")
+        logger.info("Received response. Got data of \(data.count) bytes.")
 
         guard let statusCode = (response as? HTTPURLResponse)?.statusCode else {
-            log.error("Invalid response received. Could not get a status code.")
+            logger.error("Invalid response received. Could not get a status code.")
             throw TibberSwiftError.invalidResponse
         }
 
         guard (200...300).contains(statusCode) else {
             if let data = String(data: data, encoding: .utf8) {
-                log.error("Invalid status code received. Expected status code between 200 and 300, but got \(statusCode, privacy: .public) instead. Data: \(data, privacy: .public)")
+                logger.error("Invalid status code received. Expected status code between 200 and 300, but got \(statusCode) instead. Data: \(data)")
             } else {
-                log.error("Invalid status code received. Expected status code between 200 and 300, but got \(statusCode, privacy: .public) instead.")
+                logger.error("Invalid status code received. Expected status code between 200 and 300, but got \(statusCode) instead.")
             }
             throw TibberSwiftError.invalidStatusCode(statusCode)
         }
@@ -97,10 +92,10 @@ private extension TibberSwift {
 
         let result = try jsonDecoder.decode(GraphQLResult<Output>.self, from: data)
         if let object = result.object {
-            log.info("Decoded object to \(Output.self, privacy: .public). Done.")
+            logger.info("Decoded object to \(Output.self). Done.")
             return object
         } else {
-            log.error("Could not transform result object to request data object (\(Output.self, privacy: .public))")
+            logger.error("Could not transform result object to request data object (\(Output.self))")
             throw TibberSwiftError.decodingError
         }
     }
