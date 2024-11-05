@@ -14,9 +14,15 @@ let package = Package(
             name: "TibberSwift",
             targets: ["TibberSwift"]),
     ],
+    dependencies: [
+        .package(url: "https://github.com/apple/swift-log.git", from: "1.6.1"),
+    ],
     targets: [
         .target(
             name: "TibberSwift",
+            dependencies: [
+                .product(name: "Logging", package: "swift-log"),
+            ],
             resources: [
                 .process("Queries")
             ]),
