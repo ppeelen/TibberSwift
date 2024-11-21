@@ -150,4 +150,26 @@ final class TibberSwiftTests: XCTestCase {
                                                                          "Authorization": "consumptionKey",
                                                                          "User-Agent": "TibberSwift"])
     }
+    
+    // MARK: - Test PriceInfoToday
+    
+    func testPriceInfoToday() async throws {
+        // Given
+        let data = TestDataManager.getData(forFile: "json/PriceInfoToday.json")!
+        urlSessionMock.dataForReturnValue = (data, TestDataManager.dummyResponse())
+        
+        let sut = TibberSwift(apiKey: "priceInfoTodayKey", urlSession: urlSessionMock)
+        
+        // When
+        let result = try await sut.priceInfoToday()
+        
+        // Then
+        XCTAssertEqual(result.homes.first?.id, UUID(uuidString: "f2a876f3-e09e-4bba-af19-79b038893c3d"))
+        XCTAssert(result.homes.first?.currentSubscription.priceInfo.today.isEmpty == false)
+        XCTAssertEqual(result.homes.first?.currentSubscription.priceInfo.today.first?.total, 0.256)
+        XCTAssertEqual(result.homes.first?.currentSubscription.priceInfo.today.first?.energy, 0.0789)
+        XCTAssertEqual(result.homes.first?.currentSubscription.priceInfo.today.first?.tax, 0.1771)
+        XCTAssertEqual(result.homes.first?.currentSubscription.priceInfo.today.first?.startsAt.timeIntervalSinceReferenceDate, 745970400.0)
+        XCTAssertEqual(result.homes.first?.currentSubscription.priceInfo.today.first?.currency, "EUR")
+    }
 }
