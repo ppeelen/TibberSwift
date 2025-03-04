@@ -161,7 +161,7 @@ final class TibberSwiftTests: XCTestCase {
         let sut = TibberSwift(apiKey: "pushNotificationKey", urlSession: urlSessionMock)
         
         // When
-        let result = try await sut.pushNotification(title: "test-title", message: "test-message")
+        let result = try await sut.sendPushNotification(title: "test-title", message: "test-message")
         
         // Then
         XCTAssertTrue(result.sendPushNotification.successful)
