@@ -150,4 +150,21 @@ final class TibberSwiftTests: XCTestCase {
                                                                          "Authorization": "consumptionKey",
                                                                          "User-Agent": "TibberSwift"])
     }
+    
+    // MARK: - Test Push Notification
+    
+    func testPushNotification() async throws {
+        // Given
+        let data = TestDataManager.getData(forFile: "json/PushNotificationResult.json")!
+        urlSessionMock.dataForReturnValue = (data, TestDataManager.dummyResponse())
+        
+        let sut = TibberSwift(apiKey: "pushNotificationKey", urlSession: urlSessionMock)
+        
+        // When
+        let result = try await sut.sendPushNotification(title: "test-title", message: "test-message")
+        
+        // Then
+        XCTAssertTrue(result.sendPushNotification.successful)
+        XCTAssertEqual(result.sendPushNotification.pushedToNumberOfDevices, 1)
+    }
 }

@@ -35,7 +35,11 @@ struct GraphQLResult<T: Decodable>: Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
 
         let dataObj = try container.decodeIfPresent(ViewerResult<T>.self, forKey: .data)
-        self.object = dataObj?.viewer
+        if let view = dataObj?.viewer {
+            self.object = view
+        } else {
+            self.object = try container.decodeIfPresent(T.self, forKey: .data)
+        }
 
         var errorMessages: [String] = []
         if let errors = try container.decodeIfPresent([Error].self, forKey: .errors) {

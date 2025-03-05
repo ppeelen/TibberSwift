@@ -51,6 +51,16 @@ public extension TibberSwift {
         let operation = try GraphQLOperation.consumption(resolution: .hourly, last: 100)
         return try await performOperation(operation)
     }
+    
+    /// Sends a push notification to all logged-in devices of the user
+    /// - Parameters:
+    ///   - title: Title of the notification
+    ///   - message: Message of the notification
+    /// - Returns: ``PushNotificationResult`` for the notification
+    func sendPushNotification(title: String, message: String) async throws -> PushNotificationResult {
+        let operation = try GraphQLOperation.pushNotification(title: title, message: message)
+        return try await performOperation(operation)
+    }
 
     /// Custom GraphQL operation
     /// - Parameter operation: The operation in question
